@@ -22,4 +22,31 @@
 .footer{
     grid-area: footer;
     background-color: brown;
+    
+}
+@media(min-width: 576px){
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        'menu main'
+        'menu main'
+        'footer footer';
+        grid-template-columns: 150px calc(100vw - 150px);
+        
+       
+    }
+
+}
+@media(min-width: 992px){
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        'menu main main'
+        'menu main main'
+        'footer main main';
+        grid-template-columns: 150px calc(100vw - 150px);
+        
+       
+    }
+
 }
