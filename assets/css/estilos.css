@@ -8,7 +8,7 @@
     'menu'
     'main'
     'footer';
-    grid-template-rows: 100px calc(100vh - 200px) 100px;
+    grid-template-rows: 100px calc(100vh - 250px) 150px;
 }
 .menu{
     grid-area: menu;
@@ -28,14 +28,73 @@
 }
 .main{
     grid-area: main;
-    background-color: blueviolet;
     overflow-y: scroll;
+}
+.main-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(8, 8, 7, 0.21);
+
+
+}
+.card{
+    background-color: #fff;
+    border: 1px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-basis: 50%;
+    margin-top:10px;
+    transition: filter .5s transform 0.3s ease-in;
+    box-shadow:5px 5px 5px black;
+}
+.card:hover{
+    filter: brightness(60%);
+    transform: scale(1.1);
+}
+.card-head{
+    display: flex;
+    justify-content: center;
+}
+.card img{
+    width: 100%;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.marca{
+    color: gray;
+}
+.precio{
+    color: red;
+}
+.card-foot{
+    display: flex;
+    justify-content: center;   
 }
 .footer{
     grid-area: footer;
-    background-color: brown;
     
 }
+.flex-footer{
+    display: flex;
+    justify-content: space-around;
+}
+.fredes{
+    display: flex;
+}
+.ftitle{
+    font-weight: bold;
+}
+.flist ul{
+    list-style: none;
+    
+}
+.navegacion{display: none;}
+
 @media(min-width: 576px){
     .grid-container{
         display: grid;
@@ -43,9 +102,34 @@
         'menu main'
         'menu main'
         'footer footer';
-        grid-template-columns: 150px calc(100vw - 150px);
+        grid-template-columns: 250px calc(100vw - 250px);
         
-       
+    }
+    .barmenu{
+        display: none;
+    }
+    .menu-flex{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .card{
+        flex-basis: 40%;
+    }
+    .navegacion{
+        display: block;
+    }
+    .navegacion ul{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        list-style: none;
+    }
+    .navegacion ul li a{
+        text-decoration: none;
+        color:black;
+        display:block;
+        padding: 10px;
     }
 
 }
@@ -55,10 +139,11 @@
         grid-template-areas: 
         'menu main main'
         'menu main main'
-        'footer main main';
-        grid-template-columns: 150px calc(100vw - 150px);
-        
-       
+        'footer footer footer';
+        grid-template-columns: 250px calc(100vw - 250px);
+    }
+    .card{
+        flex-basis: 20%;
     }
 
 }
