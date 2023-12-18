@@ -12,7 +12,19 @@
 }
 .menu{
     grid-area: menu;
-    background-color: blue;
+    
+}
+.menu-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    margin-left:10px;
+    margin-right:10px
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 900;
 }
 .main{
     grid-area: main;
